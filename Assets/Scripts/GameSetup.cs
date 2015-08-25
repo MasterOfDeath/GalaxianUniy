@@ -29,6 +29,11 @@ public class GameSetup : MonoBehaviour {
 	public static int level = 1;
 	public static bool gameOver = true;
 
+	public Sprite redSprite;
+	public Sprite tealSprite;
+	public Sprite purpleSprite;
+	public Sprite liderSprite;
+
 	void Start () {
 		if (gameOver) {
 			level = 1;
@@ -79,13 +84,32 @@ public class GameSetup : MonoBehaviour {
 		Vector3 posEnemy;
 		float posXEnemyStart = -1 * (betweenEnemy / 2 + enemySize / 2) - 3 * (betweenEnemy + enemySize);
 
+		Sprite curSprite = liderSprite;
+
 		for (int i = 0; i < 4; i++) {
 			float y = scrHalfH - topPadding - (i * (enemySize + betweenEnemy));
 			posEnemy = new Vector3 (posXEnemyStart, y, 0f);
 
+			//Каждый ряд - свой спрайт
+			switch (i) {
+			case 1:
+				curSprite = redSprite;
+				break;
+			case 2:
+				curSprite = tealSprite;
+				break;
+			case 3:
+				curSprite = purpleSprite;
+				break;
+			default:
+				break;
+			}
+
 			for (int j = 0; j < 8; j++) {
 				GameObject curEnemy = (GameObject)Instantiate (enemy, posEnemy, new Quaternion ());
 				curEnemy.SetActive (true);
+
+				curEnemy.GetComponent<SpriteRenderer>().sprite = curSprite;
 
 				enemyCount++;
 

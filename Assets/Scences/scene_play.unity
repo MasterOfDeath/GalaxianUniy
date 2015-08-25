@@ -510,7 +510,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 494fdbee443de724bae88e9036b60f15, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3fd4bc3069c02b34fa8d0fafd99277b4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &719938484
 Transform:
@@ -1057,7 +1057,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 5.69999981, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
 --- !u!1 &1174260129
@@ -1097,6 +1097,10 @@ MonoBehaviour:
   betweenEnemy: .300000012
   scoreText: {fileID: 565239735}
   levelManager: {fileID: 732259678}
+  redSprite: {fileID: 21300000, guid: 972561af52fd0714e9d9502e5586b349, type: 3}
+  tealSprite: {fileID: 21300000, guid: e3a30de86206d5c4e97ca95646c7f211, type: 3}
+  purpleSprite: {fileID: 21300000, guid: fc5d9c5d35e6fef42ac480eeb303e819, type: 3}
+  liderSprite: {fileID: 21300000, guid: 3fd4bc3069c02b34fa8d0fafd99277b4, type: 3}
 --- !u!4 &1174260131
 Transform:
   m_ObjectHideFlags: 0
